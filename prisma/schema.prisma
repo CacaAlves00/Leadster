@@ -37,6 +37,5 @@ model Video {
   category        Category        @relation(fields: [categoryName], references: [name])
   categoryName    String
   createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
   DownloadVideo   DownloadVideo[]
 }
