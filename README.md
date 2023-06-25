@@ -1,3 +1,63 @@
+## Project Structure
+
+📁 Project Root
+   - 📁 components: Contains all your components
+   - 📁 pages: Contains Next.js pages
+   - 📁 styles: Contains global styles and theme files
+   - 📁 public: Contains static assets
+   - 📁 prisma: Contains Prisma database configuration
+   - 📄 README.md: Project documentation
+
+## Folder Structure
+
+📁 components
+   - 📁 Component1
+     - 📄 Component1.tsx: Component implementation
+     - 📄 styles.ts: Styled components for Component1
+   - 📁 Component2
+     - 📄 Component2.tsx: Component implementation
+     - 📄 styles.ts: Styled components for Component2
+   - 📁 Component3
+     - 📄 Component3.tsx: Component implementation
+     - 📄 styles.ts: Styled components for Component3
+   - ...
+
+📁 pages
+   - 📄 index.tsx: Home page
+   - 📄 about.tsx: About page
+   - 📄 ...
+
+📁 styles
+   - 📄 GlobalStyles.ts: Global CSS styles
+   - 📄 theme.ts: Theme configuration
+
+📁 public
+   - 📄 favicon.ico: Favicon file
+   - 📄 ...
+
+📁 prisma
+   - 📄 schema.prisma: Prisma database schema
+
+📄 README.md: Project documentation
+
+## Explanation
+
+- **components**: This folder contains all your components. Each component has its own folder, which contains the component implementation (`ComponentX.tsx`) and a `styles.ts` file where you can define the styled components specific to that component.
+
+- **pages**: This folder contains all your Next.js pages. You can create different page files here, such as `index.tsx` for the home page and `about.tsx` for the about page. You can create additional folders to organize your pages if needed.
+
+- **styles**: This folder holds global styles and theme-related files. `GlobalStyles.ts` can contain global CSS styles that are applied across the entire project. `theme.ts` can contain theme configurations like colors, fonts, etc.
+
+- **public**: This folder is used to store static assets such as images, icons, etc. You can place your `favicon.ico` file and other assets here.
+
+- **prisma**: This folder contains the Prisma database configuration. You can keep your `schema.prisma` file here, which defines the structure of your database and tables.
+
+- **README.md**: This file is your project documentation. You can include information about the project structure, technologies used, and any other relevant details.
+
+By structuring your project in this way, you can keep your components organized in the `components` folder, use the latest version of Next.js, and utilize Prisma for your database needs. Styled components can be defined within each component's `styles.ts` file, ensuring separation of concerns and maintainability.
+
+Feel free to customize this structure further based on your specific project requirements.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
