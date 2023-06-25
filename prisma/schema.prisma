@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  name  String  @unique
+  Video Video[]
+}
+
+model Download {
+  path          String          @id @unique
+  DownloadVideo DownloadVideo[]
+}
+
+model DownloadVideo {
+  id           String   @id @default(uuid())
+  video        Video    @relation(fields: [videoId], references: [id])
+  videoId      String
+  download     Download @relation(fields: [downloadPath], references: [path])
+  downloadPath String
+}
+
+model Video {
+  id              String          @id @default(uuid())
+  title           String
+  description     String
+  imagePath       String
+  publicationDate DateTime        @default(now())
+  category        Category        @relation(fields: [categoryName], references: [name])
+  categoryName    String
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  DownloadVideo   DownloadVideo[]
+}
